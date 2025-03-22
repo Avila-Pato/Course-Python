@@ -8,3 +8,7 @@ elif edad < 65:
     print("Eres un adulto.")
 else:
     print("Eres una persona mayor.")
+
+# Ternarios
+mensaje = "Eres mayor de dad" if edad > 17 else "eres menor de edad"  
+print(mensaje)
