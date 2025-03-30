@@ -63,11 +63,15 @@ print("\nEjercicio 4: Variables")
 print("Crea variables para tu nombre, edad y altura.")
 print("Usa f-strings para imprimir una presentación.")
 
-# "Hola! Me llamo midudev y tengo 39 años, mido 1.70 metros"
+nombre = "pato"
+edad = 26
+altura = 1.90
+
+
 
 #Forma recomendata de declarar f-string
 
-print(f"hola soy {name}, tengo {age - 13} años")
+print(f"hola soy {name}, tengo {age - 13} años y mido {altura} cm")
 
 ### Completa aquí
 
@@ -78,3 +82,10 @@ print("1. Crea una variable con el número PI (sin asignar una variable)")
 print("2. Redondea el número con round()")
 print("3. Haz la división entera entre el número que te salió y el número 2")
 print("4. El resultado debería ser 1")
+
+# Solución:
+    # Redondeamos directamente el valor de pi sin almacenarlo en una variable
+resultado = int(round(3.1416) / 2)
+print("Valor de PI (aproximado):", 3.1416)
+print("PI redondeado:", round(3.1416))
+print("División entera de PI redondeado entre 2:", resultado)
