@@ -18,6 +18,7 @@ print(f"Hola  {nombre} Encantado")
 
 # la funcion input() devuelve un valor de tipo string
 # si queremos obtener un nuemero se debe convertir el string a numero
+# age = int(input("Cuantos a;os tienes>\n"))
 age = input("Cuantos a;os tienes>\n")
 age = int(age)
 
@@ -26,7 +27,7 @@ print(f"tu edad es {age}")
 #La funcion input() Permite tambien devolver multiples valores 
 # separados por comas
 
-print("Obteniedno multiples valores")
+# print("Obteniedno multiples valores")
 
 country, city = input("En que pais y ciudad vives\n").split(" ")
 print(f"Tu pais es {country} y tu ciudad es {city}")

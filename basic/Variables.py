@@ -55,3 +55,9 @@ print(is_user_logged_in)
 
 name: str = "pato" # Indica que la variable es una cadena de texto
 print(name)
+
+age: int = 32 # Indica que la variable es un entero
+print(age)
+
+is_admin: bool = False # Indica que la variable es un booleano
+print(is_admin)
