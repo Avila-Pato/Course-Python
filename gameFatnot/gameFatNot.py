@@ -59,12 +59,12 @@ while running:
         if event.type == pygame.QUIT:
             running = False
     
-    if peso <= 60:
+    if peso <= 100:
        print("Peso normal")
        break
   
-    # Mostrar imagen si el peso es mayor a 60
-    elif peso > 60:
+    # Mostrar imagen si el peso es mayor a 100
+    elif peso > 100:
         rotated_img = pygame.transform.rotate(imagen, angle)
         rotated_rext = rotated_img.get_rect(center=img_rect.center)
         screen.blit(rotated_img, rotated_rext)
