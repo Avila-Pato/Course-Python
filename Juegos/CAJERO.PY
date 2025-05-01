@@ -42,8 +42,7 @@ while True:
                     ### ejemplo Ejemplo: si cantDinero = 8500 y billete = 2000, entonces 8500 // 2000 = 4
                     if cantidad > 0:
                         print(f"Entregando {cantidad} billete(s) de {billete}")
-                        cantDinero %= billete  ## Resta los billetes entregados 
-                
+                        # cantDinero %= billete  ## Cantidad de dinero restante después de entregar billetes
         except ValueError:
             print("Ingrese una cantidad válida")
 
@@ -56,3 +55,9 @@ while True:
 
     else:
         print("Ingrese una opción válida")
+
+
+
+## // te da cuántos billetes de ese tipo puedes entregar.
+
+## %= te actualiza el valor restante (lo que todavía falta por cubrir con billetes más pequeños).
