@@ -19,6 +19,9 @@ while True:
             print(f"Ingresando {cantIngresar} su estado de cuenta actual es de {EstadoCuenta}")
     elif opc == 2: 
         cantDinero = int(input("Ingrese la cantidad que desea retirar\n"))
+        if cantDinero <= EstadoCuenta:
+            EstadoCuenta -= cantDinero
+            print(f"Retirando {cantDinero} su estado de cuenta actual es de {EstadoCuenta}")
     elif opc == 3:
         print(f"Su estado de cuenta actual es de {EstadoCuenta}")
     elif opc == 4:
