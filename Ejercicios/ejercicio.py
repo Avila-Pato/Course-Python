@@ -38,7 +38,8 @@ for i in range(1, bultos_cantidad + 1):
         bultos = float(input(f"Ingrese la cantidad del primer {numBulto} bultos peso valido entre (1kg a 10kg) "))
     except ValueError:
         print("Ingrese un valor valido (1kg a 10kg)")
-        continue
+        break
+        # continue // Puede hacer esata opcion cointunue para que a pesar de haverse equivocado puede seguir el proceso
 
     if 1 <= bultos <= 5:
         livianos += 1
