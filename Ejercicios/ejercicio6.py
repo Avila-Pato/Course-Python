@@ -17,9 +17,9 @@ adulto = 0
 joven = 0
 niño = 0 
 cantidad= 0
-personas = 0
 Masculino = 0
 Femenino = 0
+personas = 0
 
 try:
     cantidad = int(input("Inrese la cantidad de persnas \n"))
@@ -28,6 +28,7 @@ except ValueError:
 
 for i in range(cantidad):
     personas +=  1
+
     sexo = str(input(f"Ingrese el genero de la {personas} persona (f\m) \n")).lower()
     if sexo not in ["f", "m"]:
         print("Ingrese un gener valido valida ")
