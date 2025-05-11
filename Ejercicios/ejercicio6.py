@@ -21,8 +21,10 @@ personas = 0
 Masculino = 0
 Femenino = 0
 
-
-cantidad = int(input("Inrese la cantidad de persnas \n"))
+try:
+    cantidad = int(input("Inrese la cantidad de persnas \n"))
+except ValueError:
+ print("Ingrese un numero valido")
 
 for i in range(cantidad):
     personas +=  1
@@ -48,12 +50,11 @@ for i in range(cantidad):
         print("Ingrese un valor valido")
 
    
-
-
-print(f"total de niño es {niño} ")
-print(f"total de jovene es {joven} ")
-print(f"total de aadulto es {adulto} ")
-print(f"Total mujeres {Masculino}")
-print(f"Total Hmbres {Femenino}")
+if cantidad > 0:
+    print(f"total de niño es {niño} ")
+    print(f"total de jovene es {joven} ")
+    print(f"total de aadulto es {adulto} ")
+    print(f"Total mujeres {Masculino}")
+    print(f"Total Hmbres {Femenino}")
 
 
