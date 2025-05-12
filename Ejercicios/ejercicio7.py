@@ -13,26 +13,29 @@ import os
 
 if os.system("clear") !=0: os.system("cls")
 
-coca_cola = 400
-fanta= 400
-sprite = 400
 
-cantidadFanta = 0
-cantidadCoca = 0
-cantidadSprite = 0
 
+# cantidadFanta = 0
+# cantidadCoca = 0
+# cantidadSprite = 0
+
+precios = 400
 dinero = int(input("Ingrese su dinero "))
 
 print(("Ingrese la bebida que desea"))
 bebidas = int(input("1.Coca-Cola\n2.Fata\n3.Sprite\n"))
 
 
-if dinero == coca_cola:
+if dinero == precios:
     print("Gracias por su compra")
-elif dinero > coca_cola:
-    print(f"Gracias por su compra su vuelto es {dinero - coca_cola}")
+elif dinero > precios:
+    print(f"Gracias por su compra su vuelto es {dinero - precios}")
 else:
     print("No hay suficiente dinero")
+
+
+
+
  
 # if bebidas == 1:
 #     cantidadCoca += 1
