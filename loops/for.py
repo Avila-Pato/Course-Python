@@ -1,4 +1,5 @@
-import os 
+import os
+import random 
 
 if os.system("clear") != 0: os.system("cls")
 
@@ -59,3 +60,12 @@ animales = ["perro", "gato", "raton", "loro", "pez", "canario"]
 animales_Mayusculas = [animal.upper() for animal in animales ] 
 
 print(animales_Mayusculas)
+
+
+cadena = ["lobo", "cerdo", "serpiente", "caballo"]
+leer = random.choice(cadena)
+
+num = len(leer)
+print(num)
+for i in range(len(leer[0])):
+    print(leer[0])

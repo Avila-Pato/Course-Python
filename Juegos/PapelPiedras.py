@@ -6,9 +6,10 @@ if os.system("clear") != 0:
     os.system("cls")
 
 opc = ["papel", "piedra", "tijeras"]
-intentos = 0
 
+intentos = 0
 maxIntentos = 3
+
 puntos1 = 0
 puntos2 = 0
 empate = 0
