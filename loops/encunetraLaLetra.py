@@ -12,21 +12,18 @@ intenos = 0
 maxIntentos = 3
 adivina = 0
 while maxIntentos > intenos:
- 
     intenos += 1
- 
-adivina = int(input("Intente adivinar: "))
- 
-if adivina == ramdonNumero:
- 
-        print(f"Lo lograste el numero random es {ramdonNumero} en el intento {intentos}")
+    adivina = int(input("Intente adivinar: "))
+    if adivina == ramdonNumero:
+        print(f"Lo lograste el numero random es {ramdonNumero} en el intento {intenos}")
         exit()
-elif adivina > ramdonNumero:
- print("el numero es menor ")
-elif adivina < ramdonNumero:
- print("el numero es mayor ")
- print(f"Te dare una pista el numeroe sta mas cerca del {ramdonNumero + 1} que del 2 ")
-else:
- print("Ingrese una opcion valida")
+    elif adivina > ramdonNumero:
+        print("el numero es menor ")
+    elif adivina < ramdonNumero:
+        print("el numero es mayor ")
+        print(f"Te dare una pista el numeroe sta mas cerca del {ramdonNumero + 1} que del 2 ")
+    else:
+        print("Ingrese una opcion valida")
+ 
 if intenos == 3:
  print(f"Lo siento se te acabaron los turnos el numero era {ramdonNumero}")
