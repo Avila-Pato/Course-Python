@@ -12,6 +12,7 @@ while pregunta == "si":
         print(asistentes)
     
         pregunta = str(input("desea agregar otro? (si/no) \n"))
+        
     
 if pregunta == "no":
     print("cerrando..")
