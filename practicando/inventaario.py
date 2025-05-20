@@ -4,6 +4,7 @@ import os
 if os.system("clear") !=0: os.system("cls")
 
 productos = []
+
 pregunta = str(input("Desea agregar un nuevo producto:(si/no) \n"))
 
 while pregunta == "si":

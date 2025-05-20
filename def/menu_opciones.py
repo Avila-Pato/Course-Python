@@ -70,11 +70,40 @@ def opcion_1():
         
     except ValueError:
         print("Ingrese solo valoresnumericos")
-    
-    
+
+# 2. Simulación de Compras:
+# a. El usuario puede simular realizar un número ilimitado de compras.
+# b. Para cada compra, se solicita al usuario ingresar el monto de la
+# compra. El programa suma los montos de cada compra.
+# c. Se verifica que el monto de la compra sea mayor o igual a cero.
+
+# d. Se realiza la compra y se actualiza el saldo de la tarjeta para cada
+# iteración del bucle for.
+
 def opcion_2():
-    print("Carrito de comptras")   
-     
+    
+    total = 0
+    
+    while True:
+        add = (input("Si desea salir ingrese (s) \n  Ingrese su compra "))
+        
+        if add == "salir":
+            print("saliendo")
+            break
+        
+        try:
+            entrada= int(add)
+            
+            if entrada > 0:
+                total += entrada
+                print(total)
+            else:
+                print("Ingresa un monto mayor que cero.")
+        except ValueError:
+            print("Ingrese valor numerico")        
+
+       
+        
 def opcion_3():
     print("Salienndo")   
     exit()
