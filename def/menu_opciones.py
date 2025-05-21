@@ -88,7 +88,7 @@ def opcion_2():
             entrada= int(add)
             
             if entrada > 0:
-                if entrada<= saldo_tarjeta:
+                if entrada <= saldo_tarjeta:
                     total += entrada
                     saldo_tarjeta -= entrada
                     print(f"Compra realizada por ${entrada}.")
