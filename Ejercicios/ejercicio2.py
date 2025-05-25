@@ -1,43 +1,32 @@
-# Deberás construir un programa que esta diseñado para ayudar en la venta
-# de pasajes. Inicia preguntándote cuántos pasajes deseas vender. Luego,
-# utiliza un proceso organizado (llamado bucle for) para pedirte el precio de
-# cada pasaje por separado. Si ingresas un valor que no es un número, te
-# indica que necesitas proporcionar un valor numérico válido. Al final, muestra
-# el monto total que se ha obtenido por la venta de todos los pasajes
-
-# • Solicita al usuario la cantidad de pasajes a vender.
-# • Se utiliza un bucle for para iterar sobre la cantidad de pasajes.
-# • Dentro del bucle, se solicita al usuario el precio de cada pasaje y se
-# acumula en la variable totalIngresos.
-# • Si el usuario ingresa un valor no numérico para el precio del pasaje,
-# el programa muestra un mensaje y sale del bucle usando break.
-# • Finalmente, se imprime el total de ingresos por la venta de pasajes
-
 import os
 
-if os.system("clear") !=0: os.system("cls")
 
+os.system("cls" if os.name == "nt" else "clear")
 
-boletos = 0
 totalIngresos = 0
+cantidad_boletos = 0
 
-try:
-    pasajes_vendidos = int(input("Ingrese la cantidad de boletos a vender: "))
-except ValueError:
-    print("Por favor, ingrese un número válido.")
-    exit()
 
-for i in range(1, pasajes_vendidos + 1):
+while cantidad_boletos <= 0:
     try:
-        boletos += 1
-        precio_boleto= int(input(f"Ingrese el precio del boleto {boletos} \n"))
-        totalIngresos =+ precio_boleto * boletos
+        cantidad_boletos = int(input("Ingrese la cantidad de boletos a vender: "))
+        if cantidad_boletos <= 0:
+            print("Ingrese un número positivo")
     except ValueError:
-        print("Ingrese un valor valido")
-        break
+        print("Por favor, ingrese un número válido.")
 
-print(f"El total de ingresos es ${totalIngresos:.2f} dolares")
 
-## :2.f define como valor float 
+for i in range(cantidad_boletos):
 
-   
+    precio_boleto = -1 # Valor inicial para que entre al while
+    while precio_boleto < 0:
+        try:
+            precio_boleto = float(input(f"Ingrese el precio del boleto {i + 1}: "))
+            if precio_boleto < 0:
+                print("Ingrese un valor positivo.")
+        except ValueError:
+            print("Ingrese un valor numérico válido.")
+            precio_boleto = -1  # Fuerza que se repita
+    totalIngresos += precio_boleto
+
+print(f"\nEl total de ingresos por la venta de boletos es: ${totalIngresos:.2f} dólares.")

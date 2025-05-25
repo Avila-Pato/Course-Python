@@ -20,33 +20,42 @@ if os.system("clear") != 0:
 livianos = 0
 normales = 0
 numBulto = 0
+bultos = 0
 
 # Precios
 precio_liviano = 1000
 precio_normal = 2000
 
-try:
-    bultos_cantidad = int(input("Ingrese la cantidad de bultos  \n"))
-except ValueError:
-    print("Igrese un valor valido")
-    exit()
+bultos_cantidad = 0
+
+while bultos_cantidad <= 0:
+        try:    
+            bultos_cantidad = int(input("Ingrese la cantidad de bultos  \n"))
+            if bultos_cantidad < 0:
+                print("Ingrese un numero no negatico")
+        except ValueError:
+            print("Igrese un valor valido")
 
 
-for i in range(1, bultos_cantidad + 1):
-    try:
-        numBulto += 1
-        bultos = float(input(f"Ingrese la cantidad del primer {numBulto} bultos peso valido entre (1kg a 10kg) "))
-    except ValueError:
-        print("Ingrese un valor valido (1kg a 10kg)")
-        break
-        # continue // Puede hacer esata opcion cointunue para que a pesar de haverse equivocado puede seguir el proceso
+for i in range(0, bultos_cantidad, 1):
+    peso_valido = False
 
-    if 1 <= bultos <= 5:
-        livianos += 1
-    elif 6 <= bultos <= 10:
-        normales += 1
-    else:
-        print("No valido ingrese un numero entre (1kg a 10kg)")
+    while not peso_valido:
+        try:
+            bultos = float(input(f"Ingrese la cantidad del primer {i + 1} bultos peso valido entre (1kg a 10kg) "))
+            if bultos < 0:
+                print("Ingrese un pesoo positivo ")
+        except ValueError:
+            print("Ingrese un valor valido (1kg a 10kg)")
+
+        if 1 <= bultos <= 5:
+            livianos += 1
+            peso_valido = True
+        elif 6 <= bultos <= 10:
+            normales += 1
+            peso_valido = True
+        
+            
 
 total = (livianos * precio_liviano) + (normales * precio_normal)
 
