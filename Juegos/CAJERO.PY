@@ -36,13 +36,14 @@ while True:
             else:
                 EstadoCuenta -= cantDinero
                 print(f"Retirando {cantDinero}. Estado de cuenta actual: {EstadoCuenta}")
-                # Entregar billetes
-                for billete in [20000, 10000, 5000, 2000, 1000, 500]:
-                    cantidad = cantDinero // billete ## Calcula cuántos billetes de ese valor caben en el monto actual. 
-                    ### ejemplo Ejemplo: si cantDinero = 8500 y billete = 2000, entonces 8500 // 2000 = 4
-                    if cantidad > 0:
+                for billete in [20000, 10000, 5000, 2000, 1000, 500, 100, 50, 20, 10, 5, 1]:
+                    cantidad = cantDinero // billete 
+                    if billete == cantDinero or cantidad > 0:
+                        cantDinero = cantDinero % billete # %=  me da el residuo de la division 
+                        #por ejemplo 10 entre 3 cabe 3 veces y el residuo es 1
                         print(f"Entregando {cantidad} billete(s) de {billete}")
-                        # cantDinero %= billete  ## Cantidad de dinero restante después de entregar billetes
+
+
         except ValueError:
             print("Ingrese una cantidad válida")
 
