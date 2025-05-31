@@ -21,8 +21,8 @@ while True:
         else:
             nombre = input("Ingrese el nombre del usuario: ")
             contra = input(f"Ingrese la contraseña de {nombre}: ")
-            encontrado = False
             
+            encontrado = False ##new flag
             for u in usuarios:
                 if u["Nombre"] == nombre and u["Contra"] == contra:
                     encontrado = True
@@ -67,7 +67,7 @@ while True:
         print("Usuario registrado correctamente.")
 
     elif opc == 3:
-        print("Saliendo del programa. ¡Hasta luego!")
+        print("Saliendo del programa..")
         break
 
     else:
