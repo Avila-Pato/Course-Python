@@ -8,6 +8,7 @@ print("Elija una opción")
 usuarios = []
 sesion_iniciada = False
 
+
 while True:
     try:
         opc = int(input("\n1) Iniciar sesión\n2) Registrar usuario\n3) Salir\n> "))
@@ -39,7 +40,7 @@ while True:
                         continue
 
                     if sub_opc == 1:
-                        numero = input("Ingrese un número telefónico (9 dígitos): ")
+                        numero = input("Ingrese un número telefónico (9 dígitos): ") 
                         if  len(numero) == 9:
                             print("Número guardado correctamente.")
                         else:
@@ -63,6 +64,7 @@ while True:
     elif opc == 2:
         nombre = input("Ingrese el nombre del usuario: ")
         contra = input(f"Ingrese la contraseña de {nombre}: ")
+        
         usuarios.append({"Nombre": nombre, "Contra": contra})
         print("Usuario registrado correctamente.")
 
