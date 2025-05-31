@@ -40,10 +40,11 @@ while True:
 
                     if sub_opc == 1:
                         numero = input("Ingrese un número telefónico (9 dígitos): ")
-                        if numero.isdigit() and len(numero) == 9:
+                        if  len(numero) == 9:
                             print("Número guardado correctamente.")
                         else:
                             print("Ingrese un número válido de 9 dígitos.")
+                            
                     elif sub_opc == 2:
                         correo = input("Ingrese su correo electrónico: ")
                         if "@" in correo and ".com" in correo and len(correo) > 0:
