@@ -10,48 +10,34 @@
 # Programe las líneas de código faltantes
 
 import os
-
-if os.system("clear") !=0: os.system("cls")
-
 import random
+
+if os.system("clear") != 0:
+    os.system("cls")
+
 listaNumeros = []
 intentos = 3
 
 
-ramdomNumero = random.randint(1, 49)
 print("Ingrese sus 7 numeros de la suerte:  ")
-
-for i in range(1, 8):
-    num = int(input(f"Ingrese el numero {i}: "))
-    listaNumeros.append(num)
-
-print(f"Usted ingreso los siguientes numeris {listaNumeros}")
-
 while intentos > 0:
-    numeros_sorteo = random.sample(range(1, 50), 7) 
+    ramdomNumero = random.randint(1, 49)
+
+    for i in range(1, 8):
+        num = int(input(f"Ingrese el numero {i}: "))
+        listaNumeros.append(num)
+
+    print(f"Usted ingreso los siguientes numeris {listaNumeros}")
+
+    numeros_sorteo = random.sample(range(1, 50), 7)
+
     print(f"Los numeros soeteados en la ronda {intentos} son: {numeros_sorteo}")
+
     if listaNumeros == numeros_sorteo:
         print("Felicidades usted gano")
     else:
         print("Lo siento, usted no gano")
     intentos -= 1
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 # if intentos == 0:
