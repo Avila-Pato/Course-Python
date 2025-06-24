@@ -38,21 +38,33 @@ def turistas_por_pais():
         print("No hay turista de ese pais ")
         
 def turistas_por_mes():
-    mes = input("Ingrese mes a buscar: ")
+    
+    while True:
+        
+        mes = input("Ingrese mes a buscar: ")
+        
+        
+        if not (mes.isdigit() and 1 <= int(mes) <= 12):
+            print("Mes inválido. Intente nuevamente.")
+            continue
 
-    encontrado = False
-    for id, datos in turistas.items():
-        fecha = datos[2]
-        # la fecha esta en formato dd-mm-aaaa
-        if  fecha[3:5] == mes:
+        contador = 0
+        
+        for id, datos in turistas.items():
+            fecha = datos[2]
+            # la fecha esta en formato dd-mm-aaaa
+            if  fecha[3:5] == mes:
+                contador += 1
                 print(f"ID: {id} | Fecha: {fecha}")
-                encontrado = True
-                
-    if not encontrado:
-        print("No hay turistas de ese mes")
-    else:
-        porcentaje = (encontrado / len(turistas)) * 100
-        print(f"Porcentaje de turistas en el mes {porcentaje:.2f}%")
+
+        if contador == 0:
+            print("No hay turistas de ese mes")
+        
+        else:
+            porcentaje = (contador / len(turistas)) * 100
+            print(f"Porcentaje de turistas en el mes {porcentaje:.2f}%")
+            
+        break
         
 def eliminar_turista():
     id_borrar = input("Ingrese el ID del turista que desea eliminar: ").strip()
