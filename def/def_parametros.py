@@ -29,7 +29,7 @@ def menu():
 
 
 #   print(f"ID: {id}, Nombre: {nombre}, País: {pais}, Fecha: {fecha}")
-
+ 
 
 def turistas_por_pais(pais):
     for id, dato in turistas.items():
