@@ -15,17 +15,7 @@
 
  
 
-estudiantes = {
-    '2025001': {
-        'nombre': 'Ana Martínez',
-        'asignaturas': {
-            'Matemáticas': [6.5, 5.8, 6.9],
-            'Biología': [5.5, 6.2],
-            'Lenguaje': [3.3, 1.3],
-            'Programacion':[6.4, 7.0]
-        }
-    },
-}
+estudiantes = {}
  
 def Menu():
     print("1- Agregar Estudiante")
