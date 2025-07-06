@@ -16,6 +16,17 @@
  
 
 estudiantes = {}
+
+# estudiantes = {
+#     "2025001": {
+#         "nombre": "Ana",
+#         "asignaturas": {
+#             "Matemáticas": [6.0, 7.0],
+#             "Historia": [5.5]
+#         }
+#     }
+# }
+
  
 def Menu():
     print("1- Agregar Estudiante")
