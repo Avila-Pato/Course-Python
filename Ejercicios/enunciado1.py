@@ -141,7 +141,7 @@ def Modificar_tarea():
 
 def Eliminar_tarea():
     if not tareas:
-        print("❌ No hay tareas registradas.")
+        print(" No hay tareas registradas.")
         return
 
     print("## Lista de tareas con contenido ##")
@@ -202,30 +202,6 @@ while True:
             print("Ingrese una opcion correcta ")       
             
     
-    
-
-
- 
-
- 
-
-# Enunciado 2: Inventario Simple de Productos 
-
-# Descripción: Este sistema permite gestionar un inventario básico de productos. Cada producto tendrá un ID único, un nombre, un precio y una cantidad en stock. El sistema permitirá agregar, consultar, actualizar y eliminar productos. 
-
-# Características Clave: 
-
-# •	Uso de un diccionario donde las claves son los IDs de los productos y los valores son diccionarios con los detalles del producto. 
-
-# •	Generación automática de ID para los productos. 
-
-# •	Funciones para cada operación. 
-
-# •	Validación de entradas numéricas y existencia de productos. 
-
-# •	Ciclos y decisiones para la lógica del programa. 
-
- 
 
  
 
