@@ -71,9 +71,40 @@ def Agregar_estudiante():
      }
 
 def Consultar_estudiante():
-    print(estudiantes)
+    if not estudiantes:
+        print("No hay datos")
+        return
+    
+    for idMatricula, datos in estudiantes.items():
+        print(f"ID del estudiante", idMatricula)
+        print(f"Nombre: {datos['nombre']}")
+        
+        print("Asignatura")
+        
+        for asignatura, notas in datos['asignaturas'].items():
+            print(f"- {asignatura}. {notas}")
+        
 def Calcular_promedio():
-    pass
+    if not estudiantes:
+        print("No hay datos")
+        return
+    
+    matricula = input("Ingrese la matricula del estudiante para ver su promedio: ")
+    
+    if matricula not in estudiantes:
+        print("Estudiante no encontrado")
+        return
+    datos = estudiantes[matricula]
+    print(f"Matricula: {matricula}")
+    print(f"Nombre: {datos['nombre']}")
+    
+    print("Promedio por asignaturas ")
+    for asignatura, notas in datos['asignaturas'].items():
+        if notas:
+            promedio = sum(notas) / len(notas)
+            print(f" {asignatura}: {promedio:.2f}")
+        else:
+            print(f"= {asignatura}: Sin notas registradas")
 def Eliminar_estudiante():
     pass
 
