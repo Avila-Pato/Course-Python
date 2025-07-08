@@ -15,7 +15,6 @@
 
  
 
-estudiantes = {}
 
 # estudiantes = {
 #     "2025001": {
@@ -28,6 +27,7 @@ estudiantes = {}
 # }
 
  
+estudiantes = {}
 def Menu():
     print("1- Agregar Estudiante")
     print("2- Consultar Estudiante")

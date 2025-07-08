@@ -39,8 +39,7 @@
 
 import os
 
-if os.system("clean") != 0:
-    os.system("cls")
+if os.system("clean") != 0: os.system("cls")
 
 numero_guardado = []
 
