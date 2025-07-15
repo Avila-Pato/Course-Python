@@ -24,7 +24,7 @@ stock = {
             'UWU131HD': [349990,1],
             'FS1230HD': [249990,0], 
 } 
-
+# //cambios
 
 def menu():
     print(" *** MENU PRINCIPAL *** ")
