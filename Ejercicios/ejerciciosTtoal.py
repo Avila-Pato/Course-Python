@@ -12,6 +12,7 @@ print(resultado)
 nombre = 'Nicolas'
 apellido = 'Feliz'
 
+
 concatenacion = nombre + ' ' + apellido
 
 print(concatenacion[::-1])
